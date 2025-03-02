@@ -48,7 +48,7 @@ a {
 
 .header-main>.nav-items a:hover {
     color: var(--primary-color);
-    text-decoration: underline;
+    text-decoration: overline;
 }
 
 .nav-items+a button {
@@ -63,4 +63,6 @@ a {
 
 .nav-items+a button:hover {
     background-color: #007896;
+    box-shadow: 0px 0px 30px 0 #04beecbb;
+    font-weight: bold;
 }
