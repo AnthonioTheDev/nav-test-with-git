@@ -43,13 +43,15 @@ a {
 .header-main>.nav-items a {
     color: #fff;
     text-decoration: none;
+    padding: 8px 18px;
+    /* somehow, using padding: 12px 22px; woud stop the layout shift */
+    /* Adds padding around each link to increase clickable area */
+    border-radius: 30px;
+    /* Rounds the corners to make links pill-shaped */
     transition: all ease-in-out 0.5s;
+    /* Smooth transition for hover effects */
 }
 
-.header-main>.nav-items a:hover {
-    color: var(--primary-color);
-    text-decoration: overline;
-}
 
 .nav-items+a button {
     border: none;
@@ -65,4 +67,27 @@ a {
     background-color: #007896;
     box-shadow: 0px 0px 30px 0 #04beecbb;
     font-weight: bold;
+}
+
+/* Hover effect for header navigation links */
+
+
+.nav-items a:hover {
+    background: var(--primary-color);
+    /* Changes background color on hover */
+    padding: 12px 22px;
+    /* Ensures padding remains consistent on hover */
+    border-radius: 30px;
+    /* Keeps rounded corners on hover */
+    color: white;
+    /* Changes text color to white on hover */
+    transition: all ease-in-out 0.5s;
+    /* Keeps smooth transition effect */
+    font-weight: bold;
+}
+
+/* Active state styling for header navigation links */
+.nav-items--active a {
+    color: white;
+    /* Ensures text color is white for active links */
 }
